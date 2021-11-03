@@ -24,6 +24,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     # I put this command in the dockerfile.
     #command: java -jar agent.jar -jnlpUrl http://jenkinscompose...itd
+    command: java -jar agent.jar -jnlpUrl http://192.168.44.44:8880/computer/ubuntuslave/jenkins-agent.jnlp -secret 46fe1ff1912808b45f59929367315c60db5031d8214373e5aacc65d2d60e022e -workDir "/home/"
 
   selenium_hub:
     image: selenium/hub
